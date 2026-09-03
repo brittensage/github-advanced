@@ -1,0 +1,25 @@
+---
+title: "GitHub Advanced"
+author: "britten"
+format: html
+execute:
+  echo: false
+---
+
+```{r}
+#| message: false
+library(tidyverse)
+```
+
+```{r}
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point(color = "steelblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "darkorange") +
+  labs(
+    title = "Vehicle Weight and Fuel Economy",
+    x = "Weight (1000 lbs)",
+    y = "Miles per gallon"
+  ) +
+  theme_minimal()
+
+```
